@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { useState } from 'react';
 import { Button } from 'components/Button';
+import { Label } from './components/Label';
 
 const Container = styled.div`
   height: 100vh;
@@ -20,10 +21,10 @@ const Contents = styled.div`
   justify-content: center;
 `;
 
-const Label = styled.span`
+/*const Label = styled.span`
   margin: 0 16px;
   font-size: 1.2rem;
-`;
+`;*/
 
 /*const Button = styled.button`
   border: 0;
@@ -55,9 +56,9 @@ function App() {
     <Container>
       <Title>Counter App</Title>
       <Contents>
-        <Button />
-        <Label>{counter}</Label>
-        <Button />
+        <Button label="-" onClick={sub} />
+        <Label data={counter} />
+        <Button label="+" onClick={add} />
       </Contents>
     </Container>
   );
